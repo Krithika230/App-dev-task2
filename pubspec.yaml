@@ -74,7 +74,7 @@ flutter:
     - family: ShadownIntoLight
       fonts:
         - asset: fonts/ShadowsIntoLight-Regular.ttf
-        
+
     - family: Scriptin
       fonts:
         - asset: assets/fonts/SCRIPTIN.ttf
@@ -82,8 +82,6 @@ flutter:
     - family: Wonderland
       fonts:
         - asset: assets/fonts/Beyond Wonderland.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
