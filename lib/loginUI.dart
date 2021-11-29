@@ -19,6 +19,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController _name = new TextEditingController();
+  TextEditingController _email = new TextEditingController();
+  TextEditingController _pass = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,6 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                     Padding(
                         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                         child: TextField(
+                          controller: _name,
                           decoration: InputDecoration(
                               fillColor: Colors.white,
                               border: OutlineInputBorder(),
@@ -69,6 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                     Padding(
                         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                         child: TextField(
+                          controller: _email,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Enter Email ID',
@@ -82,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                     Padding(
                         padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                         child: TextField(
+                          controller: _pass,
                           obscureText: true,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
@@ -104,6 +111,10 @@ class _LoginPageState extends State<LoginPage> {
                             child: ElevatedButton(
                               onPressed: (){
                                 // TODO: insert code for login screen
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                                DisplayPage(name: _name.text, email: _email.text)
+                                ),
+                                );
                               },
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
